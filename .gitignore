@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.local
+*.env
+build/
+dist/
+*.log
+.DS_Store
+.vscode/
+
+# Environment variables
+.env
+.env.local
+*.env
+app/api/.env

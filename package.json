@@ -1,0 +1,20 @@
+{
+  "name": "ecommerce",
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n api,admin \"npm run dev -w app/api\" \"npm start -w app/admin\"",
+    "build": "npm run build -w app/admin",
+    "start": "npm start -w app/api",
+    "seed": "npm run seed -w app/api",
+    "test": "npm test --ws --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
